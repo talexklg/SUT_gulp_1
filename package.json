@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/talexklg/gulpsut.git"
+    "url": "git+https://github.com/talexklg/SUT_gulp_1.git"
   },
   "bugs": {
-    "url": "https://github.com/talexklg/gulpsut/issues"
+    "url": "https://github.com/talexklg/SUT_gulp_1/issues"
   },
-  "homepage": "https://github.com/talexklg/gulpsut#readme"
+  "homepage": "https://github.com/talexklg/SUT_gulp_1#readme"
 }
