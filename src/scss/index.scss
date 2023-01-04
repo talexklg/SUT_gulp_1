@@ -1,24 +1,330 @@
 @import 'part/default.scss';
 
+$color-main--lightest: #fff;
+$color-main--lighter:#fff;
+$color-main--light:#00A8E8;
+$color-main:#007EA7;
+$color-main--dark: #003459;
+$color-main--darker:#00171F;
+$color-main--darkest: #000;
 
-.video-background__container {
-    position: relative;
-    min-height: 100vh;
+/* 
+.header-main {
+    background-color: $color-main--darkest;
+    opacity: 0.5;
+    &__container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__body {
+    }
+
+    &__pre-title {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.menu {
     display: flex;
-    flex-direction: column;
-}
-.video-background__dark-opacity {
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    opacity: .5;
-    z-index: 1;
-}
-.video-background__item{
-    object-fit: cover;
-    position: fixed;
-    top: 0;
+	justify-content: space-between;
+    min-width: 100%;
+	height: 8.5vh;
+	z-index: 4;
+	position: fixed;
+	top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+	background-color: $color-main--darkest;
+	
+    &__container {
+        
+    }
+
+    &__list {
+        display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		text-transform: uppercase;
+		align-items: center;
+		cursor: pointer;
+		font-family: sans-serif;
+    }
+
+    &__list-item {
+    }
+
+    &__list-item--active {
+    }
+
+    &__form {
+    }
+
+    &__form-item {
+    }
+
+    &__link {
+    }
+
+    &__eye {
+    }
 }
+.form {
+
+    &__input-text {
+    }
+
+    &__input-submit {
+    }
+}
+.marquee-container {
+	display: flex;
+    align-items: center;
+	width: 100%;
+    overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	z-index: 6;
+}
+
+.marquee {
+	font-size: max(12px, 3vw);
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: $color-main--lightest;
+    white-space: nowrap;
+	text-shadow: 2px 2px 3px rgb(0, 0, 0), -2px -2px 3px rgb(0, 0, 0), -2px 2px 3px rgb(0, 0, 0), 2px -2px 3px rgb(0, 0, 0);
+    animation: marquee 40s infinite linear; // notice the infinite 
+	@media (max-width: 767px) {
+
+	}
+	&::after {
+		content: "Программирование Scratch | Судомоделирование | Анимация и видеопроизводство | Робототехника | Детско-юношеская автошкола | 3D-моделирование | Радиотехническое конструирование | Программирование Python | Танцевальная студия | Изобразительное искусство | Авиамоделирование | Верстка веб-сайтов | LEGO-роботы | Английский язык | Начальное техническое моделирование | 3D-ручка | Вокальная студия |";
+	}	
+}	 
+ 
+*/
+
+.header-main {
+    height: 100vh;
+}
+
+.video-background__item {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+.video-background__dark-opacity {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .5;
+        z-index: 1;
+}
+
+
+.title {
+    display: block;
+    padding: 20px 0 0 0;
+    font-size: 24px;
+    background-color: #ffffff;
+
+}
+
+.text {
+    padding: 20px 20px 0;
+    background-color: #e65be6;
+}
+
+.header-main {
+    height: 100vh;
+  
+    &__container {
+  
+    }
+  
+    &__body {
+    }
+  
+    &__pre-title {
+    }
+  
+    &__title {
+    }
+  
+    &__text {
+    }
+}
+  
+.menu {
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        text-transform: uppercase;
+        align-items: center;
+        cursor: pointer;
+        font-family: sans-serif;
+    }
+  
+    &__list-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: max(14px, 1.0vw);
+		font-weight: bold;
+		padding: 0.8vh 0;
+		margin: 1.5vw;
+		border-radius: 10px;
+		color:$color-main--lightest;
+		text-decoration: none;
+		transition: all .5s ease-in-out;
+		flex: 1 1 auto;
+        z-index: 6;
+        position: relative;
+        
+        &:not(.menu__list-item--active)::before {
+            content: "";
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width .5s ease-in-out;
+        }
+
+        &:not(.menu__list-item--active):hover::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $color-main--lightest;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width .5s ease-in-out;
+        }
+    }
+  
+    &__list-item--active {
+        color: $color-main--dark;
+		border: 1px solid $color-main--lightest;
+		box-shadow: 0 0 10px 8px $color-main--lightest;
+		background-color: $color-main--lightest;
+    }
+  
+    &__form {
+        display: flex;
+        justify-content: flex-end;
+		align-items:center;
+		cursor: pointer;
+		flex-grow: 1.5;
+    }
+  
+    &__form-item {
+        margin-right: 1vw;
+    }
+  
+    &__link {
+        margin-right: 1vw;
+    }
+  
+    &__eye {
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+    &__input-text {
+        display: inline-block;
+        width: 100%;
+	    height: 4vh;
+	    border: 1px;
+  	    color: $color-main--dark;
+  	    padding: 3px;
+  	    background-color: $color-main--lightest;
+  	    z-index: 6;
+  	    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  	    cursor: pointer;
+    }
+
+	:focus {
+		width: 300px;
+		
+	}
+	:focus:hover {
+		border: 1px solid $color-main--lightest;
+	}
+
+    &__input-submit {
+        display: inline-block;
+	    width: 30px;
+	    height: 30px;
+	    background: url(../img/search.svg) center center no-repeat;
+	    background-size: cover;
+    }
+}
+  
+.marquee-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}
+  
+.marquee {
+    font-size: max(12px, 3vw);
+    line-height: 1.3;
+    font-family: sans-serif;
+    padding: 24px 0;
+    color: $color-main--lightest;
+    white-space: nowrap;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0), -2px -2px 3px rgb(0, 0, 0), -2px 2px 3px rgb(0, 0, 0), 2px -2px 3px rgb(0, 0, 0);
+    animation: marquee 40s infinite linear; // notice the infinite 
+      
+    @media (max-width: 767px) {
+  
+    }
+    
+    &::after {
+        content: "Программирование Scratch | Судомоделирование | Анимация и видеопроизводство | Робототехника | Детско-юношеская автошкола | 3D-моделирование | Радиотехническое конструирование | Программирование Python | Танцевальная студия | Изобразительное искусство | Авиамоделирование | Верстка веб-сайтов | LEGO-роботы | Английский язык | Начальное техническое моделирование | 3D-ручка | Вокальная студия | Акробатический рок-н-рол | ";
+    }	
+}	 
+
+@keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+  
