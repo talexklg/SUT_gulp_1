@@ -181,17 +181,14 @@ html {
 
 .first {
     top: 12px;
-    transition: .5s all;
 }
 
 .second {
     top: 22px;
-    transition: .5s all;
 }
 
 .third {
     top: 32px;
-    transition: .5s all;
 }
 
 .menu {
@@ -233,7 +230,7 @@ html {
 		border-radius: 10px;
 		color:$color-main--lightest;
 		text-decoration: none;
-		transition: all .5s ease-in-out;
+		transition: all .5s;
 		flex: 1 1 auto;
         z-index: 6;
         position: relative;
@@ -245,7 +242,7 @@ html {
             position: absolute;
             bottom: 0;
             left: 0;
-            transition: width .5s ease-in-out;
+            transition: width .5s;
         }
 
         &:not(.menu__list-item--active):hover::before {
@@ -256,7 +253,7 @@ html {
             position: absolute;
             bottom: 0;
             left: 0;
-            transition: width .5s ease-in-out;
+            transition: width .5s;
         }
     }
   
