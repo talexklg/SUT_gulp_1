@@ -1,6 +1,11 @@
 - var i = 0
 nav.menu 
     .menu__container
+        input(type="checkbox" id="check-box")
+        label.label(for="check-box")
+        .burger-line.first
+        .burger-line.second
+        .burger-line.third 
         .menu__list
             each name in ['Главная', 'Новости', 'Объединения', 'Расписание', 'Записаться', 'Информация']
                 if i == 0
