@@ -387,10 +387,12 @@ html {
     }
 }
 
+main {
+    background: $color-main--darkest;
+}
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    background: #000;
     display: flex;
 }
 
@@ -398,19 +400,42 @@ html {
     width: 330px;
     margin: 0 auto;
     padding: 20px 0 0 0;
-    outline: 1px solid orange;
+
 }
 .gosuslugi-banner {
     width: 300px;
     height: 500px;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+.helpline-banner,  
+.safety, 
+.pfdo,
+.minobrKO,
+.minobrRF,
+.one-window,
+.rosobr,
+.digital-educational-resource,
+.fcior {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        
+    }
+}
+
 
 .main {
 
     &_page {
         width: 100%;
         color: $color-main--lightest;
-        outline: 1px solid green;
     }
 
     &_container {
@@ -495,5 +520,14 @@ html {
 
         &_text {
         }
+    }
+}
+
+.footer {
+    color: $color-main--lightest;
+    background-color: $color-main--darkest;
+
+    p{
+        padding-left: 20px;
     }
 }

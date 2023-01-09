@@ -3,8 +3,9 @@ html(lang='ru')
     include html/head
     body   
         include html/header_main
-        .container
-            include html/aside.html
-            include html/main_page
+        main
+            .container
+                include html/aside.html
+                include html/main_page
         include html/footer
         script(src="js/app.min.js")
