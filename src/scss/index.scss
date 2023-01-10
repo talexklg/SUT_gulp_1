@@ -443,10 +443,11 @@ main {
     }
 
     &_container {
+
     }
 }
 .block {
-    margin: 20px;
+    margin: 20px 20px 20px 5px;
     border-radius: 20px;
     background-color: $color-main--dark;
     
@@ -455,7 +456,7 @@ main {
         font-size: 2rem;
         text-align: center;
         padding: 20px 0;
-        color: $color-main--light;
+        color: $color-main;
     }
 
     &_text {
@@ -465,6 +466,11 @@ main {
 
         p {
             padding-bottom: 20px;
+
+            a {
+                text-decoration: none;
+                color: $color-main--light;
+            }
         }
 
         div {
@@ -489,6 +495,14 @@ main {
         }
 
         &_text {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1.5fr 1fr 1fr 1fr;
+            gap: 10px;
+
+            p:nth-child(3) {
+                grid-column: span 2;
+            }
         }
     }
 
@@ -498,6 +512,10 @@ main {
         }
 
         &_text {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1.5fr 1fr 1fr 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
         }
     }
 
@@ -507,6 +525,10 @@ main {
         }
 
         &_text {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
         }
     }
 
@@ -516,6 +538,11 @@ main {
         }
 
         &_text {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 30% 40% 30%;
+            gap: 10px;
+
         }
     }
 
