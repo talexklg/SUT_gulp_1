@@ -455,7 +455,7 @@ main {
     &_title {
         font-size: 2rem;
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 0 50px 0;
         color: $color-main;
     }
 
@@ -558,9 +558,28 @@ main {
 
 .footer {
     color: $color-main--lightest;
-    background-color: $color-main--darkest;
+    background-color: $color-main--darkest; 
 
-    p{
+    p {
         padding-left: 20px;
     }
+    &__container {
+        display: flex;
+    }
+
+    &__first {
+        width: 33.33333%;
+    }
+
+    &__second {
+        width: 33.33333%;
+    }
+
+    &__third {
+        width: 33.33333%;
+    }
+}
+.copyright {
+}
+.autor {
 }
