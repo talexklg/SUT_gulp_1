@@ -11,7 +11,7 @@ nav.menu
                 if i == 0
                     a.menu__list-item.menu__list-item--active(href="#"+(i++) title=name)= name
                 else 
-                    a.menu__list-item(href="#"+(i++) title=name)= name
+                    a.menu__list-item(href="#"+(i++))= name
         .menu__form
             form.menu__form-item.form(autocomplete="on")
                 input.form__input-text(type="text" placeholder="Поиск по сайту...")
